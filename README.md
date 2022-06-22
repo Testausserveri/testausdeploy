@@ -72,14 +72,14 @@ This service will implement the Internal Communications Protocol and be the proa
 
 Additionally the manager must poll deployed repositories for changes & store all current configuration and information about containers' ownership and status in a database (MongoDB) running in a separate container.
 
-## Guardian
+### Guardian
 The Guardian will manage the firewall and other network configurations on the host system. Such as opening ports.
 
 This service will be ran as a SystemD service on the host system with Node.JS.
 
 This service will implement the Internal Communications Protocol.
 
-## Worker
+### Worker
 The worker will run all deployment related commands on the host system.
 
 This service will be ran as a SystemD service on the host system with Node.JS.
