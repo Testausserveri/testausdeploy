@@ -9,7 +9,7 @@ This project will implement 3 services for the new LUMI server.
 2. LXC container deployment for members' personal purposes to allow for strong enough segregation of users
 3. REST API to trigger actions and provide statistics
 
-The project will be organized in 3 components
+The project will be organized in to 3 components:
 1. The Manager, which implements all services of this project
 2. The Guardian, which implements a service for the manager to update certain system configurations on the host system.
 3. The Worker, which runs runs/restarts/builds containers
