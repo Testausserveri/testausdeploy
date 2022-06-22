@@ -4,7 +4,7 @@ This project is still a concept!
 # Development
 
 ## Architecture
-This project will implement 2 services for the new LUMI server.
+This project will implement 3 services for the new LUMI server.
 1. Docker auto deploy directly from a repository under the Testausserveri Github organization without any repository configuration
 2. LXC container deployment for members' personal purposes to allow for strong enough segregation of users
 3. REST API to trigger actions and provide statistics
