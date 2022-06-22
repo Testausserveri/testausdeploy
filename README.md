@@ -48,7 +48,7 @@ Certificates shall be specific for each service, self-signed and stored locally.
 
 The main reason to use WebSockets, even though they are not the most efficient way to communicate between processes (pipes exist), is to allow possible separation of all components, when more servers become available to us.
 
-This protocol shall use simple JSON object's as their format and follow the following structure:
+This protocol shall use simple JSON objects as their format which shall follow the following structure:
 
 ```json
 {
