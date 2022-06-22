@@ -70,7 +70,7 @@ The Manager will be implemented as a Docker container and the service written in
 
 This service will implement the Internal Communications Protocol and be the proactive party of the communication pair in terms of initiating a connection.
 
-Additionally the manager must poll deployed repositories for changes & store all current configuration and information about containers' ownership and status in a database (MongoDB) running in a separate container.
+Additionally the manager must poll deployed repositories for changes & store all current configuration and information about containers' ownership and status in a database (MongoDB) running in a separate container. This database shall also contain the IPs of the Worker and Guardian components (as in the future many instances of these could exist) and every Worker should have an assigned Guardian.
 
 ### Guardian
 The Guardian will manage the firewall and other network configurations on the host system. Such as opening ports.
