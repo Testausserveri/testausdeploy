@@ -5,8 +5,8 @@ This project is still a concept!
 
 ## Architecture
 This project will implement 2 services for the new LUMI server.
-1. Docker auto deploy directly from a repository under the Testausserveri Github organization
-2. LXC container deployment for members' personal purposes
+1. Docker auto deploy directly from a repository under the Testausserveri Github organization without any repository configuration
+2. LXC container deployment for members' personal purposes to allow for strong enough segregation of users
 3. REST API to trigger actions and provide statistics
 
 The project will be organized in 3 components
@@ -28,7 +28,7 @@ The Docker auto deploy service will implement the following deploy pipeline.
     - Use the Guardian to configure the host network if required
     - Docker-compose is ran with the Worker
 
-Additionally the Docker auto deploy service will implement information about the running container(s) through the Manager's REST API.
+Additionally the Docker auto deploy service will provide information about the running container(s) through the Manager's REST API.
 
 ### LXC container deployment
 The LXC container deployment service will provide members with an LXC container for their personal purposes.
@@ -69,6 +69,8 @@ Additionally it implements the main entrypoint for the frontend (REST API)
 The Manager will be implemented as a Docker container and the service written in Node.Js with the Express web server.
 
 This service will implement the Internal Communications Protocol and be the proactive party of the communication pair in terms of initiating a connection.
+
+Additionally the manager must poll deployed repositories for changes & store all current configuration and information about containers' ownership and status in a database (MongoDB) running in a separate container.
 
 ## Guardian
 The Guardian will manage the firewall and other network configurations on the host system. Such as opening ports.
