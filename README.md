@@ -44,7 +44,7 @@ The following features must be implemented:
 ## Communication between services
 The Internal Communication Protocol will use a secure WebSocket connection (for flexibility) to allow communication between processes.
 
-Certificates shall be specific for each service, self-signed and stored locally.
+Certificates shall be specific for each service, self-signed and stored locally. In addition, public key authentication shall be implemented to identify remote components.
 
 The main reason to use WebSockets, even though they are not the most efficient way to communicate between processes (pipes exist), is to allow possible separation of all components, when more servers become available to us.
 
