@@ -85,3 +85,10 @@ The worker will run all deployment related commands on the host system.
 This service will be ran as a SystemD service on the host system with Node.JS.
 
 This service will implement the Internal Communications Protocol.
+
+## Extra features
+### Proxying traffic through a central server (Basically our own internal network)
+This basically means we will create an additional handshake within the communications of the Workers and Manager to start authentication requiring proxy server on whatever server the Manager is running on. However, it should be noted that this will greatly increase the resource consumption of the Manager instance and thus this feature is for now deemed too complex and costly to implement/upkeep.
+
+### Internal API network
+This is a very similar idea to Amazon's API system. Basically, we want all projects to publish some sort of API to other applications/containers/virtual servers running on testaudeploy. This way we can create utility containers, central databases and or other tools to ease development and the sharing of data between applications/containers/virtual servers. However, this feature/requirement is out of scope and beyond the goals of this project.
